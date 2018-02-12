@@ -1,0 +1,94 @@
+BBLOCK	fs.h	/^#define BBLOCK(b, ninodes) (b\/BPB + (ninodes)\/IPB /
+BMAP_BN	xv6_fsck.h	/^#define BMAP_BN(num_inodes) (3 + (num_inodes\/8))$/
+BMAP_OFFSET	xv6_fsck.h	/^#define BMAP_OFFSET(num_inodes) (3 + (num_inodes\/8/
+BPB	fs.h	46
+BSIZE	fs.h	16
+CHAR_SIZE	xv6_fsck.h	34
+DATABLOCK_BN	xv6_fsck.h	32
+DATABLOCK_OFFSET	xv6_fsck.h	/^#define DATABLOCK_OFFSET(num_inodes) (4 + (num_ino/
+DIRSIZ	fs.h	52
+ERROR	xv6_fsck.c	/^ERROR(char* err) {$/
+I	fs.img	405
+IBLOCK	fs.h	/^#define IBLOCK(i)     ((i) \/ IPB + 2)$/
+IPB	fs.h	40
+MAXFILE	fs.h	27
+Mxv6_fsck	xv6_fsck.c	/^main (int argc, char* argv[]) {$/
+NDIRECT	fs.h	25
+NINDIRECT	fs.h	26
+NODE_BN	xv6_fsck.h	18
+NODE_OFFSET	xv6_fsck.h	19
+NULL	types.h	11
+NUM_ENTRIES	xv6_fsck.h	20
+PASSED	runtests.log	/^test build PASSED$/
+ROOTINO	fs.h	15
+S	fs.img	778
+SB_BN	xv6_fsck.h	15
+SB_OFFSET	xv6_fsck.h	16
+T_DEV	fs.h	7
+T_DIR	fs.h	5
+T_FILE	fs.h	6
+XV6_FSCK_H	xv6_fsck.h	2
+Y	fs.img	778
+_FS_H_	fs.h	2
+_TYPES_H_	types.h	2
+addrs	fs.h	36
+all	Makefile	/^all: xv6_fsck$/
+bitmap_check	file.c	/^void bitmap_check() {$/
+bmap	xv6_fsck.h	23
+bmp	xv6_fsck.c	8
+check_blocks	node.c	/^check_blocks() {$/
+check_dir	dir.c	/^check_dir(struct dinode *ip, uint inum) {$/
+check_extralink	dir.c	/^check_extralink() {$/
+check_file	file.c	/^check_file(struct dinode *ip, int inum) {$/
+check_file	node.c	/^check_file(struct dinode *ip, int inum) {$/
+check_inode	xv6_fsck.c	/^check_inode(struct dinode *ip, int inum) {$/
+check_parent	dir.c	/^check_parent(struct dinode *iparent, uint child_in/
+check_reg_dir	dir.c	/^check_reg_dir(struct dinode* ip, uint inum) {$/
+check_root	dir.c	/^check_root() {$/
+clean	Makefile	/^clean: $/
+datablock	xv6_fsck.c	6
+datablock	xv6_fsck.h	24
+dinode	fs.h	30
+directory_references	file.c	/^directory_references(int inum) {$/
+dirent	fs.h	54
+fY×	fs.img	778
+getAddr	xv6_fsck.c	/^getAddr(uint bn) {$/
+img_ptr	xv6_fsck.c	7
+img_ptr	xv6_fsck.h	25
+inode_inuse	file.c	/^void inode_inuse(struct dinode *ip, int inum) {$/
+inum	fs.h	55
+major	fs.h	32
+minor	fs.h	33
+name	fs.h	56
+nblocks	fs.h	21
+ninodes	fs.h	22
+nlink	fs.h	34
+ntable	xv6_fsck.c	4
+ntable	xv6_fsck.h	21
+pde_t	types.h	9
+root	xv6_fsck.c	3
+sb	xv6_fsck.c	5
+sb	xv6_fsck.h	22
+size	fs.h	20
+size	fs.h	35
+superblock	fs.h	19
+t	fs.img	78
+t	fs.img	125
+t	fs.img	143
+t	fs.img	171
+t	fs.img	198
+t	fs.img	246
+t	fs.img	298
+t	fs.img	328
+t	fs.img	375
+t	fs.img	422
+t	fs.img	455
+t	fs.img	503
+t	fs.img	558
+type	fs.h	31
+uchar	types.h	8
+uint	types.h	6
+ushort	types.h	7
+v6	fs.img	4
+validType	xv6_fsck.c	/^validType(struct dinode *ip) {$/
+xv6_fsck	Makefile	/^xv6_fsck: xv6_fsck.c $/

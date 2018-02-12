@@ -1,0 +1,1 @@
+running client with: /tmp/tmpF7QXky/p/shm_client

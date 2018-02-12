@@ -1,0 +1,599 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm -f shm_server
+rm -f shm_client
+Trying to build project using make
+make
+gcc shm_server.c -o shm_server -Wall -Werror -lrt -lpthread 
+gcc shm_client.c -o shm_client -Wall -Werror -lrt -lpthread 
+
+
+test build PASSED
+ (build project using make)
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/../../lint/cpplint.py --extensions c shm_server.c shm_client.c
+Done processing shm_server.c
+Done processing shm_client.c
+Total errors found: 0
+
+
+test linttest PASSED (10 of 10)
+ (Lint test for C programming style)
+
+starting client_without_server
+
+**********************************************************************
+
+Test client_without_server
+Client should exit gracefully if no server is running
+
+**********************************************************************
+running client with: /tmp/tmpadp_qG/p/shm_client
+
+
+test client_without_server PASSED (10 of 10)
+ (Client should exit gracefully if no server is running)
+
+starting one_client
+
+**********************************************************************
+
+Test one_client
+Test basic functionality for one client & server
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput.txt
+
+
+test one_client PASSED (10 of 10)
+ (Test basic functionality for one client & server)
+
+starting two_clients
+
+**********************************************************************
+
+Test two_clients
+Check that 2 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+
+
+test two_clients 
+ (Check that 2 clients can run concurrently)
+
+starting five_clients
+
+**********************************************************************
+
+Test five_clients
+Check that 5 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+/tmp/tmpadp_qG/p/clientoutput_2.txt
+/tmp/tmpadp_qG/p/clientoutput_3.txt
+/tmp/tmpadp_qG/p/clientoutput_4.txt
+
+
+test five_clients 
+ (Check that 5 clients can run concurrently)
+
+starting many_clients
+
+**********************************************************************
+
+Test many_clients
+Check that up to 63 clients can run concurrently
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+/tmp/tmpadp_qG/p/clientoutput_2.txt
+/tmp/tmpadp_qG/p/clientoutput_3.txt
+/tmp/tmpadp_qG/p/clientoutput_4.txt
+/tmp/tmpadp_qG/p/clientoutput_5.txt
+/tmp/tmpadp_qG/p/clientoutput_6.txt
+/tmp/tmpadp_qG/p/clientoutput_7.txt
+/tmp/tmpadp_qG/p/clientoutput_8.txt
+/tmp/tmpadp_qG/p/clientoutput_9.txt
+/tmp/tmpadp_qG/p/clientoutput_10.txt
+/tmp/tmpadp_qG/p/clientoutput_11.txt
+/tmp/tmpadp_qG/p/clientoutput_12.txt
+/tmp/tmpadp_qG/p/clientoutput_13.txt
+/tmp/tmpadp_qG/p/clientoutput_14.txt
+/tmp/tmpadp_qG/p/clientoutput_15.txt
+/tmp/tmpadp_qG/p/clientoutput_16.txt
+/tmp/tmpadp_qG/p/clientoutput_17.txt
+/tmp/tmpadp_qG/p/clientoutput_18.txt
+/tmp/tmpadp_qG/p/clientoutput_19.txt
+/tmp/tmpadp_qG/p/clientoutput_20.txt
+/tmp/tmpadp_qG/p/clientoutput_21.txt
+/tmp/tmpadp_qG/p/clientoutput_22.txt
+/tmp/tmpadp_qG/p/clientoutput_23.txt
+/tmp/tmpadp_qG/p/clientoutput_24.txt
+/tmp/tmpadp_qG/p/clientoutput_25.txt
+/tmp/tmpadp_qG/p/clientoutput_26.txt
+/tmp/tmpadp_qG/p/clientoutput_27.txt
+/tmp/tmpadp_qG/p/clientoutput_28.txt
+/tmp/tmpadp_qG/p/clientoutput_29.txt
+/tmp/tmpadp_qG/p/clientoutput_30.txt
+/tmp/tmpadp_qG/p/clientoutput_31.txt
+/tmp/tmpadp_qG/p/clientoutput_32.txt
+/tmp/tmpadp_qG/p/clientoutput_33.txt
+/tmp/tmpadp_qG/p/clientoutput_34.txt
+/tmp/tmpadp_qG/p/clientoutput_35.txt
+/tmp/tmpadp_qG/p/clientoutput_36.txt
+/tmp/tmpadp_qG/p/clientoutput_37.txt
+/tmp/tmpadp_qG/p/clientoutput_38.txt
+/tmp/tmpadp_qG/p/clientoutput_39.txt
+/tmp/tmpadp_qG/p/clientoutput_40.txt
+/tmp/tmpadp_qG/p/clientoutput_41.txt
+/tmp/tmpadp_qG/p/clientoutput_42.txt
+/tmp/tmpadp_qG/p/clientoutput_43.txt
+/tmp/tmpadp_qG/p/clientoutput_44.txt
+/tmp/tmpadp_qG/p/clientoutput_45.txt
+/tmp/tmpadp_qG/p/clientoutput_46.txt
+/tmp/tmpadp_qG/p/clientoutput_47.txt
+/tmp/tmpadp_qG/p/clientoutput_48.txt
+/tmp/tmpadp_qG/p/clientoutput_49.txt
+/tmp/tmpadp_qG/p/clientoutput_50.txt
+/tmp/tmpadp_qG/p/clientoutput_51.txt
+/tmp/tmpadp_qG/p/clientoutput_52.txt
+/tmp/tmpadp_qG/p/clientoutput_53.txt
+/tmp/tmpadp_qG/p/clientoutput_54.txt
+/tmp/tmpadp_qG/p/clientoutput_55.txt
+/tmp/tmpadp_qG/p/clientoutput_56.txt
+/tmp/tmpadp_qG/p/clientoutput_57.txt
+/tmp/tmpadp_qG/p/clientoutput_58.txt
+/tmp/tmpadp_qG/p/clientoutput_59.txt
+/tmp/tmpadp_qG/p/clientoutput_60.txt
+/tmp/tmpadp_qG/p/clientoutput_61.txt
+/tmp/tmpadp_qG/p/clientoutput_62.txt
+
+
+test many_clients 
+ (Check that up to 63 clients can run concurrently)
+
+starting clients_leave
+
+**********************************************************************
+
+Test clients_leave
+Check for consistent outputs from server and clients when client leave and reenter
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+/tmp/tmpadp_qG/p/clientoutput_2.txt
+/tmp/tmpadp_qG/p/clientoutput_3.txt
+5224 3 3
+5225 9 9
+5226 3 3
+5223 9 9
+
+
+test clients_leave 
+ (Check for consistent outputs from server and clients when client leave and reenter)
+
+starting clients_leave2
+
+**********************************************************************
+
+Test clients_leave2
+Check for consistent outputs from server and 63 clients when 1 client leaves and reenters
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+/tmp/tmpadp_qG/p/clientoutput_2.txt
+/tmp/tmpadp_qG/p/clientoutput_3.txt
+/tmp/tmpadp_qG/p/clientoutput_4.txt
+/tmp/tmpadp_qG/p/clientoutput_5.txt
+/tmp/tmpadp_qG/p/clientoutput_6.txt
+/tmp/tmpadp_qG/p/clientoutput_7.txt
+/tmp/tmpadp_qG/p/clientoutput_8.txt
+/tmp/tmpadp_qG/p/clientoutput_9.txt
+/tmp/tmpadp_qG/p/clientoutput_10.txt
+/tmp/tmpadp_qG/p/clientoutput_11.txt
+/tmp/tmpadp_qG/p/clientoutput_12.txt
+/tmp/tmpadp_qG/p/clientoutput_13.txt
+/tmp/tmpadp_qG/p/clientoutput_14.txt
+/tmp/tmpadp_qG/p/clientoutput_15.txt
+/tmp/tmpadp_qG/p/clientoutput_16.txt
+/tmp/tmpadp_qG/p/clientoutput_17.txt
+/tmp/tmpadp_qG/p/clientoutput_18.txt
+/tmp/tmpadp_qG/p/clientoutput_19.txt
+/tmp/tmpadp_qG/p/clientoutput_20.txt
+/tmp/tmpadp_qG/p/clientoutput_21.txt
+/tmp/tmpadp_qG/p/clientoutput_22.txt
+/tmp/tmpadp_qG/p/clientoutput_23.txt
+/tmp/tmpadp_qG/p/clientoutput_24.txt
+/tmp/tmpadp_qG/p/clientoutput_25.txt
+/tmp/tmpadp_qG/p/clientoutput_26.txt
+/tmp/tmpadp_qG/p/clientoutput_27.txt
+/tmp/tmpadp_qG/p/clientoutput_28.txt
+/tmp/tmpadp_qG/p/clientoutput_29.txt
+/tmp/tmpadp_qG/p/clientoutput_30.txt
+/tmp/tmpadp_qG/p/clientoutput_31.txt
+/tmp/tmpadp_qG/p/clientoutput_32.txt
+/tmp/tmpadp_qG/p/clientoutput_33.txt
+/tmp/tmpadp_qG/p/clientoutput_34.txt
+/tmp/tmpadp_qG/p/clientoutput_35.txt
+/tmp/tmpadp_qG/p/clientoutput_36.txt
+/tmp/tmpadp_qG/p/clientoutput_37.txt
+/tmp/tmpadp_qG/p/clientoutput_38.txt
+/tmp/tmpadp_qG/p/clientoutput_39.txt
+/tmp/tmpadp_qG/p/clientoutput_40.txt
+/tmp/tmpadp_qG/p/clientoutput_41.txt
+/tmp/tmpadp_qG/p/clientoutput_42.txt
+/tmp/tmpadp_qG/p/clientoutput_43.txt
+/tmp/tmpadp_qG/p/clientoutput_44.txt
+/tmp/tmpadp_qG/p/clientoutput_45.txt
+/tmp/tmpadp_qG/p/clientoutput_46.txt
+/tmp/tmpadp_qG/p/clientoutput_47.txt
+/tmp/tmpadp_qG/p/clientoutput_48.txt
+/tmp/tmpadp_qG/p/clientoutput_49.txt
+/tmp/tmpadp_qG/p/clientoutput_50.txt
+/tmp/tmpadp_qG/p/clientoutput_51.txt
+/tmp/tmpadp_qG/p/clientoutput_52.txt
+/tmp/tmpadp_qG/p/clientoutput_53.txt
+/tmp/tmpadp_qG/p/clientoutput_54.txt
+/tmp/tmpadp_qG/p/clientoutput_55.txt
+/tmp/tmpadp_qG/p/clientoutput_56.txt
+/tmp/tmpadp_qG/p/clientoutput_57.txt
+/tmp/tmpadp_qG/p/clientoutput_58.txt
+/tmp/tmpadp_qG/p/clientoutput_59.txt
+/tmp/tmpadp_qG/p/clientoutput_60.txt
+/tmp/tmpadp_qG/p/clientoutput_61.txt
+/tmp/tmpadp_qG/p/clientoutput_62.txt
+/tmp/tmpadp_qG/p/clientoutput_new.txt
+5248 15 15
+5249 15 15
+5250 15 15
+5251 15 15
+5252 15 15
+5253 15 15
+5254 15 15
+5255 15 15
+5256 15 15
+5257 15 15
+5258 15 15
+5259 15 15
+5260 15 15
+5261 15 15
+5262 15 15
+5263 15 15
+5264 15 15
+5265 15 15
+5266 15 15
+5267 15 15
+5268 15 15
+5269 14 15
+5270 15 15
+5271 15 15
+5272 15 15
+5273 15 15
+5274 15 15
+5275 15 15
+5276 15 15
+5277 15 15
+5278 15 15
+5279 15 15
+5280 15 15
+5281 15 15
+5282 15 15
+5283 15 15
+5284 15 15
+5285 15 15
+5286 15 15
+5287 15 15
+5288 15 15
+5289 15 15
+5290 15 15
+5291 14 15
+5292 15 15
+5293 15 15
+5294 15 15
+5295 14 15
+5296 14 15
+5297 14 15
+5298 5 5
+5235 15 15
+5236 5 5
+5237 15 15
+5238 15 15
+5239 15 15
+5240 15 15
+5241 15 15
+5242 15 15
+5243 15 15
+5244 15 15
+5245 15 15
+5246 15 15
+5247 15 15
+
+
+test clients_leave2 
+ (Check for consistent outputs from server and 63 clients when 1 client leaves and reenters)
+
+starting clients_all_leave
+
+**********************************************************************
+
+Test clients_all_leave
+Check for consistent outputs from server and clients when all clients leave and reenter
+
+**********************************************************************
+running server with: /tmp/tmpadp_qG/p/shm_server
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+running client with: /tmp/tmpadp_qG/p/shm_client
+/tmp/tmpadp_qG/p/serveroutput.txt
+/tmp/tmpadp_qG/p/clientoutput_0.txt
+/tmp/tmpadp_qG/p/clientoutput_1.txt
+/tmp/tmpadp_qG/p/clientoutput_2.txt
+/tmp/tmpadp_qG/p/clientoutput_3.txt
+/tmp/tmpadp_qG/p/clientoutput_4.txt
+/tmp/tmpadp_qG/p/clientoutput_5.txt
+/tmp/tmpadp_qG/p/clientoutput_6.txt
+/tmp/tmpadp_qG/p/clientoutput_7.txt
+/tmp/tmpadp_qG/p/clientoutput_8.txt
+/tmp/tmpadp_qG/p/clientoutput_9.txt
+/tmp/tmpadp_qG/p/clientoutput_10.txt
+/tmp/tmpadp_qG/p/clientoutput_11.txt
+/tmp/tmpadp_qG/p/clientoutput_12.txt
+/tmp/tmpadp_qG/p/clientoutput_13.txt
+/tmp/tmpadp_qG/p/clientoutput_14.txt
+/tmp/tmpadp_qG/p/clientoutput_15.txt
+/tmp/tmpadp_qG/p/clientoutput_16.txt
+/tmp/tmpadp_qG/p/clientoutput_17.txt
+/tmp/tmpadp_qG/p/clientoutput_18.txt
+/tmp/tmpadp_qG/p/clientoutput_19.txt
+5376 5 5
+5377 5 5
+5378 5 5
+5379 5 5
+5380 5 5
+5381 5 5
+5382 5 5
+5383 5 5
+5384 5 5
+5385 5 5
+5386 4 4
+5367 5 5
+5368 5 5
+5369 5 5
+5370 5 5
+5371 5 5
+5372 5 5
+5373 5 5
+5374 5 5
+5375 5 5
+
+
+test clients_all_leave 
+ (Check for consistent outputs from server and clients when all clients leave and reenter)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test linttest PASSED (10 of 10)
+ (Lint test for C programming style)
+
+test client_without_server PASSED (10 of 10)
+ (Client should exit gracefully if no server is running)
+
+test one_client PASSED (10 of 10)
+ (Test basic functionality for one client & server)
+
+test two_clients 
+ (Check that 2 clients can run concurrently)
+
+test five_clients 
+ (Check that 5 clients can run concurrently)
+
+test many_clients 
+ (Check that up to 63 clients can run concurrently)
+
+test clients_leave 
+ (Check for consistent outputs from server and clients when client leave and reenter)
+
+test clients_leave2 
+ (Check for consistent outputs from server and 63 clients when 1 client leaves and reenters)
+
+test clients_all_leave 
+ (Check for consistent outputs from server and clients when all clients leave and reenter)
+
+Passed 10 of 10 tests.
+Overall 10 of 10
+Points 90 of 90

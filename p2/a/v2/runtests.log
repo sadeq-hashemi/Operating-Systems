@@ -1,0 +1,547 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+xsh:
+make: xsh:: Command not found
+Makefile:5: recipe for target 'clean' failed
+make: *** [clean] Error 127
+Trying to build project using make
+make
+gcc xsh.c -o xsh -g
+
+
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py --extensions c,h xsh.c
+xsh.c:104:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:108:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:266:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:394:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:395:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+Done processing xsh.c
+Total errors found: 5
+Failure: /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+
+test linttest FAILED (0 of 5)
+ (Lint test for C programming style)
+ /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+starting exit
+
+**********************************************************************
+
+Test exit
+run exit
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+starting exec
+
+**********************************************************************
+
+Test exec
+path should be /bin
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+starting badexec
+
+**********************************************************************
+
+Test badexec
+run programs that do not exist in /bin
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badexec PASSED (3 of 3)
+ (run programs that do not exist in /bin)
+
+starting stress
+
+**********************************************************************
+
+Test stress
+stress testing the shell with large number of commands
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/ctests/stress/gen -s 1 -n 10000
+/tmp/tmp0su5Og/p/./xsh
+
+
+test stress PASSED (2 of 2)
+ (stress testing the shell with large number of commands)
+
+starting pwd
+
+**********************************************************************
+
+Test pwd
+run pwd
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test pwd PASSED (2 of 2)
+ (run pwd)
+
+starting line
+
+**********************************************************************
+
+Test line
+line with maximum allowed length
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test line PASSED (2 of 2)
+ (line with maximum allowed length)
+
+starting badline
+
+**********************************************************************
+
+Test badline
+a line that is too long
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+starting badarg
+
+**********************************************************************
+
+Test badarg
+extra argument to xsh
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh /extra
+
+
+test badarg PASSED (2 of 2)
+ (extra argument to xsh)
+
+starting whitespace
+
+**********************************************************************
+
+Test whitespace
+leading and trailing whitespace, full whitespaces or empty string
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+starting cd
+
+**********************************************************************
+
+Test cd
+cd with argument
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test cd PASSED (3 of 3)
+ (cd with argument)
+
+starting badcd
+
+**********************************************************************
+
+Test badcd
+cd to a bad directory
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badcd PASSED (2 of 2)
+ (cd to a bad directory)
+
+starting path
+
+**********************************************************************
+
+Test path
+run path and a program that exists in a given path
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+starting path2
+
+**********************************************************************
+
+Test path2
+run path with a long pathname and many different paths
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test path2 PASSED (2 of 2)
+ (run path with a long pathname and many different paths)
+
+starting typebin
+
+**********************************************************************
+
+Test typebin
+type a command in /bin
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test typebin PASSED (3 of 3)
+ (type a command in /bin)
+
+starting typebuiltin
+
+**********************************************************************
+
+Test typebuiltin
+type a built-in command
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test typebuiltin PASSED (2 of 2)
+ (type a built-in command)
+
+starting typeorder
+
+**********************************************************************
+
+Test typeorder
+type a common command in multiple paths
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+starting badtype
+
+**********************************************************************
+
+Test badtype
+type a bad command
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badtype PASSED (2 of 2)
+ (type a bad command)
+
+starting rdr
+
+**********************************************************************
+
+Test rdr
+simple redirection with no standard error
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test rdr PASSED (8 of 8)
+ (simple redirection with no standard error)
+
+starting rdr2
+
+**********************************************************************
+
+Test rdr2
+simple redirection with standard error
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test rdr2 PASSED (3 of 3)
+ (simple redirection with standard error)
+
+starting badrdr
+
+**********************************************************************
+
+Test badrdr
+bad redirection format
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badrdr PASSED (2 of 2)
+ (bad redirection format)
+
+starting badrdr2
+
+**********************************************************************
+
+Test badrdr2
+bad redirection that redirects to invalid path
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badrdr2 PASSED (2 of 2)
+ (bad redirection that redirects to invalid path)
+
+starting herestr
+
+**********************************************************************
+
+Test herestr
+simple here-string without output redirection
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test herestr PASSED (8 of 8)
+ (simple here-string without output redirection)
+
+starting herestr2
+
+**********************************************************************
+
+Test herestr2
+simple here-string with output redirection
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test herestr2 PASSED (3 of 3)
+ (simple here-string with output redirection)
+
+starting badherestr
+
+**********************************************************************
+
+Test badherestr
+bad here-string with no input
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badherestr PASSED (2 of 2)
+ (bad here-string with no input)
+
+starting badherestr2
+
+**********************************************************************
+
+Test badherestr2
+bad here-string with more than one word
+
+**********************************************************************
+/tmp/tmp0su5Og/p/./xsh
+
+
+test badherestr2 PASSED (2 of 2)
+ (bad here-string with more than one word)
+
+starting valgrindtest
+
+**********************************************************************
+
+Test valgrindtest
+Valgrind test for memory management
+
+**********************************************************************
+Running valgrind
+/usr/bin/valgrind --show-reachable=yes --xml=yes --child-silent-after-fork=yes --undef-value-errors=no --xml-file=/tmp/tmp0su5Og/p/vg_summary.xml ./xsh
+[/tmp/tmp0su5Og/p]
+0> [/tmp/tmp0su5Og/p]
+0> tr is /usr/bin/tr
+[/tmp/tmp0su5Og/p]
+0> [/tmp/tmp0su5Og/p]
+0> An error has occurred
+[/tmp/tmp0su5Og/p]
+1> [/tmp/tmp0su5Og/p]
+1> [/afs/cs.wisc.edu/u]
+0> [/afs/cs.wisc.edu/u]
+0> total 54
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 _
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 a
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 b
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 c
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 d
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 e
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 f
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 g
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 h
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 i
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 j
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 k
+drwxr-xr-x 29 root uucp 2048 Jul 10  2006 l
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 m
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 n
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 o
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 p
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 q
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 r
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 s
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 t
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 u
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 v
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 w
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 x
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 y
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 z
+[/afs/cs.wisc.edu/u]
+0> Valgrind completed in 0.342163085938 seconds
+
+
+test valgrindtest FAILED (0 of 10)
+ (Valgrind test for memory management)
+ Valgrind error, check error section of summary: vg_summary.xml
+
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+test linttest FAILED (0 of 5)
+ (Lint test for C programming style)
+ /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+test badexec PASSED (3 of 3)
+ (run programs that do not exist in /bin)
+
+test stress PASSED (2 of 2)
+ (stress testing the shell with large number of commands)
+
+test pwd PASSED (2 of 2)
+ (run pwd)
+
+test line PASSED (2 of 2)
+ (line with maximum allowed length)
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+test badarg PASSED (2 of 2)
+ (extra argument to xsh)
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+test cd PASSED (3 of 3)
+ (cd with argument)
+
+test badcd PASSED (2 of 2)
+ (cd to a bad directory)
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+test path2 PASSED (2 of 2)
+ (run path with a long pathname and many different paths)
+
+test typebin PASSED (3 of 3)
+ (type a command in /bin)
+
+test typebuiltin PASSED (2 of 2)
+ (type a built-in command)
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+test badtype PASSED (2 of 2)
+ (type a bad command)
+
+test rdr PASSED (8 of 8)
+ (simple redirection with no standard error)
+
+test rdr2 PASSED (3 of 3)
+ (simple redirection with standard error)
+
+test badrdr PASSED (2 of 2)
+ (bad redirection format)
+
+test badrdr2 PASSED (2 of 2)
+ (bad redirection that redirects to invalid path)
+
+test herestr PASSED (8 of 8)
+ (simple here-string without output redirection)
+
+test herestr2 PASSED (3 of 3)
+ (simple here-string with output redirection)
+
+test badherestr PASSED (2 of 2)
+ (bad here-string with no input)
+
+test badherestr2 PASSED (2 of 2)
+ (bad here-string with more than one word)
+
+test valgrindtest FAILED (0 of 10)
+ (Valgrind test for memory management)
+ Valgrind error, check error section of summary: vg_summary.xml
+
+
+Passed 26 of 28 tests.
+Overall 26 of 28
+Points 85 of 100

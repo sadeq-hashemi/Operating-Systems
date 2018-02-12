@@ -1,0 +1,13 @@
+Mxsh	xsh.c	/^int main(int argc, char *argv[]) {$/
+PASSED	runtests.log	/^test build PASSED$/
+add_path	xsh.c	/^int add_path(char ** paths, char * str) {$/
+arg_size	xsh.c	7
+cd	xsh.c	/^int cd(char** arg){$/
+entry	discussion.txt	5
+exit_str	runtests.log	26
+find_path	xsh.c	/^int find_path(char** paths, char** arg) {$/
+parse	xsh.c	/^void parse(char* input_str, char **arg, const char/
+path_size	xsh.c	8
+prompt	xsh.c	/^char * prompt(int exit_status, char* input_str) {$/
+rem_all_path	xsh.c	/^int rem_all_path(char ** paths) {$/
+std	runtests.log	15

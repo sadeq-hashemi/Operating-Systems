@@ -1,0 +1,9 @@
+added init_buff
+changed add_request
+changed server_init
+
+
+echo $$ 
+  - gives pid of shell
+pstree -p <number from echo>
+  - can see how threads are getting forked and their pids

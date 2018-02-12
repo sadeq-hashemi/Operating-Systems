@@ -1,0 +1,10 @@
+bogus.err
+bogus.out
+discussion.txt
+input_str.txt
+Makefile
+runtests.log
+tags
+vg_summary.xml
+xsh
+xsh.c

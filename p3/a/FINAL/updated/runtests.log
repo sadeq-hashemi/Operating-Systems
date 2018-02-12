@@ -1,0 +1,88 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+
+
+test build PASSED
+ (build project using make)
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/3a/../../lint/cpplint.py --extensions c shm_client.c shm_server.c
+Done processing shm_client.c
+Done processing shm_server.c
+Total errors found: 0
+
+
+test linttest PASSED (10 of 10)
+ (Lint test for C programming style)
+
+starting client_without_server
+
+**********************************************************************
+
+Test client_without_server
+Client should exit gracefully if no server is running
+
+**********************************************************************
+running client with: /tmp/tmpF7QXky/p/shm_client
+
+
+test client_without_server FAILED (0 of 10)
+ (Client should exit gracefully if no server is running)
+ You shouldn't segfault!
+
+starting one_client
+
+**********************************************************************
+
+Test one_client
+Test basic functionality for one client & server
+
+**********************************************************************
+running server with: /tmp/tmpF7QXky/p/shm_server
+running client with: /tmp/tmpF7QXky/p/shm_client
+/tmp/tmpF7QXky/p/serveroutput.txt
+/tmp/tmpF7QXky/p/clientoutput.txt
+
+
+test one_client FAILED (0 of 10)
+ (Test basic functionality for one client & server)
+ Timelimit (10.0s) exceeded
+
+starting two_clients
+
+**********************************************************************
+
+Test two_clients
+Check that 2 clients can run concurrently
+
+**********************************************************************
+
+
+test two_clients FAILED (0 of 10)
+ (Check that 2 clients can run concurrently)
+ User interrupted test
+
+Skipped 5 tests.
+To keep testing after failing a test, use flag '-c' or '--continue'
+running server with: /tmp/tmpF7QXky/p/shm_server
+running client with: /tmp/tmpF7QXky/p/shm_client
+running client with: /tmp/tmpF7QXky/p/shm_client

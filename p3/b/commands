@@ -1,0 +1,9 @@
+objdump -S kernl/initcode.out
+objdump -d kernel/initcode.out
+grep 'message' -rn to search where message is
+in gdb: bt shows were func was called
+
+
+in gdb <ctrl>x + a 
+  <ctrl>x + o
+vimdiff for seeing differences

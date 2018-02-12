@@ -1,0 +1,863 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+gcc xsh.c -o xsh -Wall -std=gnu11
+xsh.c: In function ‘main’:
+xsh.c:340:18: warning: unused variable ‘buff’ [-Wunused-variable]
+             char buff[128]; 
+                  ^
+xsh.c:357:15: warning: unused variable ‘err_file’ [-Wunused-variable]
+           int err_file = open(err, O_CREAT | O_WRONLY | O_TRUNC, S_IRWXU); 
+               ^
+xsh.c:351:15: warning: unused variable ‘out_file’ [-Wunused-variable]
+           int out_file = open(out, O_CREAT | O_WRONLY | O_TRUNC, S_IRWXU); 
+               ^
+
+
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+starting linttest
+
+**********************************************************************
+
+Test linttest
+Lint test for C programming style
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py --extensions c,h xsh.c
+xsh.c:13:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:15:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:15:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:16:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:17:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:19:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:20:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:20:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:20:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:20:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:21:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:21:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:22:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:23:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:24:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:25:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:26:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:27:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:28:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:29:  Missing space before {  [whitespace/braces] [5]
+xsh.c:30:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:31:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:32:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:37:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:38:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:40:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:41:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:44:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:45:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:46:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:47:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:50:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:50:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:51:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:52:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:54:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:55:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:55:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:55:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:55:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:56:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:56:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:57:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:58:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:59:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:60:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:61:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:62:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:63:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:64:  Missing space before {  [whitespace/braces] [5]
+xsh.c:65:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:66:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:67:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:72:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:73:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:75:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:76:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:79:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:80:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:81:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:82:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:83:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:85:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:86:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:87:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:88:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:89:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:90:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:92:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:93:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:94:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:94:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:94:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:96:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:99:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:100:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:100:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:100:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:102:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:105:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:108:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:109:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:110:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:111:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:112:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:115:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:117:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:119:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:121:  An else should appear on the same line as the preceding }  [whitespace/newline] [4]
+xsh.c:121:  If an else has a brace on one side, it should have it on both  [readability/braces] [5]
+xsh.c:122:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:123:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:125:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:127:  If an else has a brace on one side, it should have it on both  [readability/braces] [5]
+xsh.c:128:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:129:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:132:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:136:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:136:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:137:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:138:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:139:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:144:  Extra space for operator  ++;  [whitespace/operators] [4]
+xsh.c:145:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:150:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:150:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:151:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:154:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:154:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:154:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:154:  Missing space before {  [whitespace/braces] [5]
+xsh.c:157:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:157:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:159:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:163:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:163:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:165:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:166:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:166:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:166:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:167:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:170:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:170:  Missing spaces around <  [whitespace/operators] [3]
+xsh.c:170:  Missing space before ( in for(  [whitespace/parens] [5]
+xsh.c:174:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:176:  Missing space before {  [whitespace/braces] [5]
+xsh.c:177:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:178:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:180:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:183:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:187:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:188:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:190:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:191:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:192:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:199:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:201:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:204:  Missing space before {  [whitespace/braces] [5]
+xsh.c:206:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:206:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:206:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:207:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:207:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:208:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:210:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:219:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:221:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:222:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:224:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+xsh.c:224:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:224:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:224:  Extra space after ( in function call  [whitespace/parens] [4]
+xsh.c:226:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:230:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:234:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:235:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:237:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:238:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:242:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:244:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:244:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:247:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:249:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:254:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:257:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:258:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:260:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:260:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:261:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:262:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:264:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:264:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:265:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:266:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:267:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:268:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:268:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:269:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:270:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:271:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+xsh.c:280:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:283:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:284:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:285:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:291:  Missing space before {  [whitespace/braces] [5]
+xsh.c:293:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:294:  Missing spaces around =  [whitespace/operators] [4]
+xsh.c:296:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:296:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:297:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:299:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:300:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:302:  Mismatching spaces inside () in if  [whitespace/parens] [5]
+xsh.c:303:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:304:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:307:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:308:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:311:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:312:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:316:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:317:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:318:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:320:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:320:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:322:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:323:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:324:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:325:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:328:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:332:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:338:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:339:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:340:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:342:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:343:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:344:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:344:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:346:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:347:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:347:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:348:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:350:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:351:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:353:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+xsh.c:353:  Should have a space between // and comment  [whitespace/comments] [4]
+xsh.c:354:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:356:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:357:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:358:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:359:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+xsh.c:360:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:362:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:363:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:367:  Redundant blank line at the start of a code block should be deleted.  [whitespace/blank_line] [2]
+xsh.c:369:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:369:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:370:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:371:  Missing space before ( in if(  [whitespace/parens] [5]
+xsh.c:372:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:373:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:376:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:380:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:385:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:388:  Line ends in whitespace.  Consider deleting these extra spaces.  [whitespace/end_of_line] [4]
+xsh.c:395:  Should have a space between // and comment  [whitespace/comments] [4]
+Done processing xsh.c
+Total errors found: 245
+Failure: /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+
+test linttest FAILED (0 of 5)
+ (Lint test for C programming style)
+ /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+starting exit
+
+**********************************************************************
+
+Test exit
+run exit
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+starting exec
+
+**********************************************************************
+
+Test exec
+path should be /bin
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+starting badexec
+
+**********************************************************************
+
+Test badexec
+run programs that do not exist in /bin
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n2> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badexec FAILED (0 of 5)
+ (run programs that do not exist in /bin)
+ ./xsh gave incorrect standard output.
+
+starting stress
+
+**********************************************************************
+
+Test stress
+stress testing the shell with large number of commands
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/ctests/stress/gen -s 1 -n 10000
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+starting line
+
+**********************************************************************
+
+Test line
+line with maximum allowed length
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n[/tmp/tmpn6KdIJ/p]\n0> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test line FAILED (0 of 5)
+ (line with maximum allowed length)
+ ./xsh gave incorrect standard output.
+
+starting badline
+
+**********************************************************************
+
+Test badline
+a line that is too long
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n0> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> 00001111111111222222222233333333334444444444555555555566666666667777777777888888888899999999990000000000111111111122222222\n[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> Linux\n[/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n0> Linux\n[/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badline FAILED (0 of 5)
+ (a line that is too long)
+ ./xsh gave incorrect standard output.
+
+starting badarg
+
+**********************************************************************
+
+Test badarg
+extra argument to xsh
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh /extra
+
+
+test badarg FAILED (0 of 5)
+ (extra argument to xsh)
+ Timelimit (10.0s) exceeded
+
+starting whitespace
+
+**********************************************************************
+
+Test whitespace
+leading and trailing whitespace, full whitespaces or empty string
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh returned incorrect status code. Expected 0 got -11
+
+
+test whitespace FAILED (0 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+ ./xsh returned incorrect status code. Expected 0 got -11
+
+starting cd
+
+**********************************************************************
+
+Test cd
+cd with argument
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+starting badcd
+
+**********************************************************************
+
+Test badcd
+cd to a bad directory
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n-1> "
+
+
+test badcd FAILED (0 of 5)
+ (cd to a bad directory)
+ ./xsh gave incorrect standard output.
+
+starting path
+
+**********************************************************************
+
+Test path
+run path and a program that exists in a given path
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+starting path2
+
+**********************************************************************
+
+Test path2
+run path with a long pathname and many different paths
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh returned incorrect status code. Expected 0 got -6
+
+
+test path2 FAILED (0 of 5)
+ (run path with a long pathname and many different paths)
+ ./xsh returned incorrect status code. Expected 0 got -6
+
+starting rdr
+
+**********************************************************************
+
+Test rdr
+simple redirection with no standard error
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+starting rdr2
+
+**********************************************************************
+
+Test rdr2
+simple redirection with standard error
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n2> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test rdr2 FAILED (0 of 10)
+ (simple redirection with standard error)
+ ./xsh gave incorrect standard output.
+
+starting badrdr
+
+**********************************************************************
+
+Test badrdr
+bad redirection format
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> [/tmp/tmpn6KdIJ/p]\n1> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badrdr FAILED (0 of 5)
+ (bad redirection format)
+ ./xsh gave incorrect standard output.
+
+starting badrdr2
+
+**********************************************************************
+
+Test badrdr2
+bad redirection that redirects to invalid path
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badrdr2 FAILED (0 of 5)
+ (bad redirection that redirects to invalid path)
+ ./xsh gave incorrect standard output.
+
+starting herestr
+
+**********************************************************************
+
+Test herestr
+simple here-string without output redirection
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test herestr PASSED (10 of 10)
+ (simple here-string without output redirection)
+
+starting herestr2
+
+**********************************************************************
+
+Test herestr2
+simple here-string with output redirection
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test herestr2 PASSED (10 of 10)
+ (simple here-string with output redirection)
+
+starting badherestr
+
+**********************************************************************
+
+Test badherestr
+bad here-string with no input
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badherestr FAILED (0 of 5)
+ (bad here-string with no input)
+ ./xsh gave incorrect standard output.
+
+starting badherestr2
+
+**********************************************************************
+
+Test badherestr2
+bad here-string with more than one word
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+Failure: ./xsh gave incorrect standard output.
+Expected: "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n1> "
+Got:      "[/tmp/tmpn6KdIJ/p]\n0> [/tmp/tmpn6KdIJ/p]\n0> "
+
+
+test badherestr2 FAILED (0 of 5)
+ (bad here-string with more than one word)
+ ./xsh gave incorrect standard output.
+
+starting typebin
+
+**********************************************************************
+
+Test typebin
+type a command in /bin
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test typebin PASSED (5 of 5)
+ (type a command in /bin)
+
+starting typebuiltin
+
+**********************************************************************
+
+Test typebuiltin
+type a built-in command
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test typebuiltin PASSED (5 of 5)
+ (type a built-in command)
+
+starting typeorder
+
+**********************************************************************
+
+Test typeorder
+type a common command in multiple paths
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+starting badtype
+
+**********************************************************************
+
+Test badtype
+type a bad command
+
+**********************************************************************
+/tmp/tmpn6KdIJ/p/./xsh
+
+
+test badtype PASSED (5 of 5)
+ (type a bad command)
+
+starting valgrindtest
+
+**********************************************************************
+
+Test valgrindtest
+Valgrind test for memory management
+
+**********************************************************************
+Running valgrind
+/usr/bin/valgrind --show-reachable=yes --xml=yes --child-silent-after-fork=yes --undef-value-errors=no --xml-file=/tmp/tmpn6KdIJ/p/vg_summary.xml ./xsh
+[/tmp/tmpn6KdIJ/p]
+0> [/tmp/tmpn6KdIJ/p]
+0> tr is /usr/bin/tr
+[/tmp/tmpn6KdIJ/p]
+0> [/tmp/tmpn6KdIJ/p]
+0> [/tmp/tmpn6KdIJ/p]
+1> [/tmp/tmpn6KdIJ/p]
+1> [/afs/cs.wisc.edu/u]
+0> [/afs/cs.wisc.edu/u]
+0> total 54
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 _
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 a
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 b
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 c
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 d
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 e
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 f
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 g
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 h
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 i
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 j
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 k
+drwxr-xr-x 29 root uucp 2048 Jul 10  2006 l
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 m
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 n
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 o
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 p
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 q
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 r
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 s
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 t
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 u
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 v
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 w
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 x
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 y
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 z
+[/afs/cs.wisc.edu/u]
+0> [/tmp/tmpn6KdIJ/p]
+0> [/tmp/tmpn6KdIJ/p]
+0> [/afs/cs.wisc.edu/u]
+0> [/afs/cs.wisc.edu/u]
+0> total 54
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 _
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 a
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 b
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 c
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 d
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 e
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 f
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 g
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 h
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 i
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 j
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 k
+drwxr-xr-x 29 root uucp 2048 Jul 10  2006 l
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 m
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 n
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 o
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 p
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 q
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 r
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 s
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 t
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 u
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 v
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 w
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 x
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 y
+drwxr-xr-x 29 root uucp 2048 Apr  7  1995 z
+[/afs/cs.wisc.edu/u]
+0> Valgrind completed in 2.47963905334 seconds
+
+
+test valgrindtest FAILED (0 of 10)
+ (Valgrind test for memory management)
+ Valgrind error, check error section of summary: vg_summary.xml
+
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+ file 'xsh' exists after make clean, removing
+
+test linttest FAILED (0 of 5)
+ (Lint test for C programming style)
+ /u/c/s/cs537-1/ta/tests/2a/../../lint/cpplint.py returned incorrect status code. Expected 0 got 1
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+test badexec FAILED (0 of 5)
+ (run programs that do not exist in /bin)
+ ./xsh gave incorrect standard output.
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+test line FAILED (0 of 5)
+ (line with maximum allowed length)
+ ./xsh gave incorrect standard output.
+
+test badline FAILED (0 of 5)
+ (a line that is too long)
+ ./xsh gave incorrect standard output.
+
+test badarg FAILED (0 of 5)
+ (extra argument to xsh)
+ Timelimit (10.0s) exceeded
+
+test whitespace FAILED (0 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+ ./xsh returned incorrect status code. Expected 0 got -11
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+test badcd FAILED (0 of 5)
+ (cd to a bad directory)
+ ./xsh gave incorrect standard output.
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+test path2 FAILED (0 of 5)
+ (run path with a long pathname and many different paths)
+ ./xsh returned incorrect status code. Expected 0 got -6
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+test rdr2 FAILED (0 of 10)
+ (simple redirection with standard error)
+ ./xsh gave incorrect standard output.
+
+test badrdr FAILED (0 of 5)
+ (bad redirection format)
+ ./xsh gave incorrect standard output.
+
+test badrdr2 FAILED (0 of 5)
+ (bad redirection that redirects to invalid path)
+ ./xsh gave incorrect standard output.
+
+test herestr PASSED (10 of 10)
+ (simple here-string without output redirection)
+
+test herestr2 PASSED (10 of 10)
+ (simple here-string with output redirection)
+
+test badherestr FAILED (0 of 5)
+ (bad here-string with no input)
+ ./xsh gave incorrect standard output.
+
+test badherestr2 FAILED (0 of 5)
+ (bad here-string with more than one word)
+ ./xsh gave incorrect standard output.
+
+test typebin PASSED (5 of 5)
+ (type a command in /bin)
+
+test typebuiltin PASSED (5 of 5)
+ (type a built-in command)
+
+test typeorder PASSED (5 of 5)
+ (type a common command in multiple paths)
+
+test badtype PASSED (5 of 5)
+ (type a bad command)
+
+test valgrindtest FAILED (0 of 10)
+ (Valgrind test for memory management)
+ Valgrind error, check error section of summary: vg_summary.xml
+
+
+Passed 13 of 27 tests.
+Overall 13 of 27
+Points 75 of 155

@@ -1,0 +1,59 @@
+int   i, pid, ind, last, hasthread;
+struct proc *p;
+struct proc *mainth;
+struct proc **c;
+struct proc *children[7];
+acquire(&ptable.lock);
+ind = 0;
+   for(p = ptable.proc; p < &ptable.proc[NPROC]; p++) {
+         if(p->parent == proc) {
+          children[ind] = p;
+          ind++;
+         }
+   }
+  if(ind == 0) {
+  release(&ptable.lock);
+  return -1;
+  }
+
+  last = ind;
+  hasthread = 0;
+  for (c = children; c <&children[last]; c++){
+    if((*c)->mainthread == 0) {
+      hasthread = 1;
+      break;
+    }
+  }
+  if(!hasthread) {
+    release(&ptable.lock);
+    return -1;
+  }
+cprintf("waiting ..\n");
+  for(;;){
+     for(c = children; c < &children[last]; c++) {
+       if(((*c)->state == ZOMBIE) && ((*c)->mainthread == 0))
+         p = *c;
+
+
+
+         mainth = proc;
+         while(mainth->mainthread != 1) {
+cprintf("trying to free\n");
+           mainth = mainth->parent;
+         }
+         i = (PGROUNDDOWN(mainth->stack_sz) - PGROUNDDOWN(p->stack_sz))/2;
+         mainth->freestack = mainth->freestack & ~i;
+         mainth->numthread -= 1;
+
+         pid = p->pid;
+//         kfree(p->kstack);
+         p->kstack = 0;
+                                //         freevm(p->pgdir);
+         p->pid = 0;
+         p->parent = 0;
+         p->name[0] = 0;
+         p->killed = 0;
+         release(&ptable.lock);
+         return pid;
+     }
+

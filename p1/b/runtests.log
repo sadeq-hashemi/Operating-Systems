@@ -1,0 +1,133 @@
+starting build
+
+**********************************************************************
+
+Test build
+build xv6 using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target 'clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+
+
+test build FAILED
+ (build xv6 using make)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+starting t0
+
+**********************************************************************
+
+Test t0
+parent of user program is sh
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/1b/ctests/t0.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+
+test t0 FAILED (0 of 20)
+ (parent of user program is sh)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+starting t1
+
+**********************************************************************
+
+Test t1
+forked child should find its parent
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/1b/ctests/t1.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+
+test t1 FAILED (0 of 20)
+ (forked child should find its parent)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+starting t2
+
+**********************************************************************
+
+Test t2
+parent of orphan is init
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/1b/ctests/t2.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+
+test t2 FAILED (0 of 20)
+ (parent of orphan is init)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+starting t3
+
+**********************************************************************
+
+Test t3
+second fork
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/1b/ctests/t3.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+
+test t3 FAILED (0 of 20)
+ (second fork)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+starting t4
+
+**********************************************************************
+
+Test t4
+nested fork
+
+**********************************************************************
+Running xv6 user progam /u/c/s/cs537-1/ta/tests/1b/ctests/t4.c
+IOError: [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+
+test t4 FAILED (0 of 20)
+ (nested fork)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+**********************************************************************
+Summary:
+test build FAILED
+ (build xv6 using make)
+ make failed (error 2)
+ required file 'xv6.img' does not exist after make
+ required file 'fs.img' does not exist after make
+
+test t0 FAILED (0 of 20)
+ (parent of user program is sh)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+test t1 FAILED (0 of 20)
+ (forked child should find its parent)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+test t2 FAILED (0 of 20)
+ (parent of orphan is init)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+test t3 FAILED (0 of 20)
+ (second fork)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+test t4 FAILED (0 of 20)
+ (nested fork)
+ Unexpected exception [Errno 2] No such file or directory: '/tmp/tmpvHdLA2/p/user/tester.c'
+
+Passed 0 of 6 tests.
+Overall 0 of 6
+Points 0 of 100
