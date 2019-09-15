@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+MAX_DATA_INTS	sort.h	6;"	d
+__rec_data_t	sort.h	/^typedef struct __rec_data_t {$/;"	s
+__rec_dataptr_t	sort.h	/^typedef struct __rec_dataptr_t {$/;"	s
+__rec_nodata_t	sort.h	/^typedef struct __rec_nodata_t {$/;"	s
+__sort_h__	sort.h	2;"	d
+column	varsort.c	/^int records, column; $/;"	v
+compare	varsort.c	/^int compare(const void *p, const void *q){$/;"	f
+data	sort.h	/^  unsigned int data[MAX_DATA_INTS];$/;"	m	struct:__rec_data_t
+data_ints	sort.h	/^  unsigned int data_ints;$/;"	m	struct:__rec_data_t
+data_ints	sort.h	/^  unsigned int data_ints;$/;"	m	struct:__rec_dataptr_t
+data_ints	sort.h	/^  unsigned int data_ints;$/;"	m	struct:__rec_nodata_t
+data_ptr	sort.h	/^  unsigned int *data_ptr;$/;"	m	struct:__rec_dataptr_t
+index	sort.h	/^  unsigned int index;$/;"	m	struct:__rec_data_t
+index	sort.h	/^  unsigned int index;$/;"	m	struct:__rec_dataptr_t
+index	sort.h	/^  unsigned int index;$/;"	m	struct:__rec_nodata_t
+main	dumpvar.c	/^main(int argc, char *argv[])$/;"	f
+main	genvar.c	/^main(int argc, char *argv[])$/;"	f
+main	varsort.c	/^int main(int argc, char *argv[])$/;"	f
+read_file	varsort.c	/^read_file(int * fd){$/;"	f
+rec_data_t	sort.h	/^} rec_data_t;$/;"	t	typeref:struct:__rec_data_t
+rec_dataptr_t	sort.h	/^} rec_dataptr_t;$/;"	t	typeref:struct:__rec_dataptr_t
+rec_nodata_t	sort.h	/^} rec_nodata_t;$/;"	t	typeref:struct:__rec_nodata_t
+records	varsort.c	/^int records, column; $/;"	v
+usage	dumpvar.c	/^usage(char *prog) $/;"	f
+usage	genvar.c	/^usage(char *prog) $/;"	f
+usage	varsort.c	/^usage(char *prog) $/;"	f
+write_file	varsort.c	/^void write_file(int* fd, rec_dataptr_t* table){$/;"	f
