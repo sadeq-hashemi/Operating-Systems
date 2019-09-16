@@ -1,7 +1,0 @@
-change copyuvm to copy stack as well: vm.c
-change or add a second version of growproc
-	sbrk is for DATA SEGMENT
-
-POLICY FOR ADDING STACK SPACE
-   &&
-checking for >=5
